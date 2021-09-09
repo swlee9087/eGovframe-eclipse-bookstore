@@ -3,10 +3,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>I'm Blue DABADI DABADA ya</title>
+<title>Insert title here</title>
 </head>
 <body>
-<h1>DABADI DABADA DABADI DABADA ya</h1> 
-<h4></h4>
+<h1>Hello Spring MVC 시작이다 !</h1> 
 </body>
 </html>
