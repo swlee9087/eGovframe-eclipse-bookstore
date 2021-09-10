@@ -9,6 +9,44 @@
 			pub_id pubId
 		from books
 	</select>
-	
-	
+	<select id="findById" resultType="shop.cofin.oracle.book.domain.BookDTO" 
+	parameterType="int">
+		select 
+            book_id bookId,
+            book_title bookTitle,
+            price,
+            pub_id pubId
+    	from books
+    	where book_id like ${bookId}
+	</select>
+	<select id="findByPubId" resultType="shop.cofin.oracle.book.domain.BookDTO" 
+	parameterType="int">
+		select 
+            book_id bookId,
+            book_title bookTitle,
+            price,
+            pub_id pubId
+    	from books
+    	where pub_id like ${pubId}
+	</select>
+	<select id="findByBookTitle" resultType="shop.cofin.oracle.book.domain.BookDTO" 
+	parameterType="string">
+		select 
+            book_id bookId,
+            book_title bookTitle,
+            price,
+            pub_id pubId
+    	from books
+    	where book_title like '%'|| #{value} ||'%'
+	</select>
+	<select id="findByPrice" resultType="shop.cofin.oracle.book.domain.BookDTO" 
+	parameterType="int">
+		select 
+            book_id bookId,
+            book_title bookTitle,
+            price,
+            pub_id pubId
+    	from books
+    	where price >= ${price}
+	</select>
 </mapper>
