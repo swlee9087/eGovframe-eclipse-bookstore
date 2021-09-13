@@ -29,5 +29,11 @@
 		<li>/publishers  -> shows list in console. </li>
 		
 </ul></table></fieldset></div>
+<div><fieldset><legend><h4>join + login </h4></legend><table>
+<ul>
+		<li><a href="./joinform">/joinform</a></li>
+		<li><a href="./loginform">/loginform</a></li>
+		
+</ul></table></fieldset></div>
 </body>
 </html>

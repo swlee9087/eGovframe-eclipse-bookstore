@@ -13,5 +13,6 @@ public interface CustomerMapper {
 	public CustomerDTO findByCustName(String custName);
 	public CustomerDTO findByAddress(String address);
 	public CustomerDTO findByPhone(String phone);
+	void save(CustomerDTO customer);
 
 }

@@ -13,4 +13,5 @@ public interface CustomerService {
 	public CustomerDTO findByCustName(String custName);
 	public CustomerDTO findByAddress(String address);
 	public CustomerDTO findByPhone(String phone);
+	public void save(CustomerDTO customer);
 }
