@@ -1,3 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="shop.cofin.oracle.mappers.OrderMapper"></mapper>
+<mapper namespace="shop.cofin.oracle.mappers.OrderMapper">
+	<select id="findAll" resultType="shop.cofin.oracle.order.domain.OrderDTO">
+		select
+            order_id orderId,
+            cust_id custId,
+            book_id bookId,
+            order_price orderPrice,
+            order_date orderDate
+      	from orders
+	</select>
+</mapper>

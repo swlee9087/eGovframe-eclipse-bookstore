@@ -10,11 +10,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import shop.cofin.oracle.customer.domain.CustomerDTO;
 import shop.cofin.oracle.customer.service.CustomerService;
 
-@Controller
+@Controller @RequestMapping("/customers")
 public class CustomerController {
 	@Autowired CustomerService customerService;
 	
-	@RequestMapping("/customers")
+	@RequestMapping ("/join")
+	public String join() {
+		return "Join Success!";
+	}
+	@RequestMapping ("/login")
+	public String login() {
+		return "Login Success!";
+	}
+	
+	
 	public void findAll() {
 		List<CustomerDTO> customers = customerService.findAll();
 		for(CustomerDTO customer : customers) {

@@ -37,6 +37,6 @@ public class CustomerDTO {
 	}
 	@Override
 	public String toString() {
-		return String.format("고객ID: %d, 고객명: %d, 고객주소: %d, 연락처: %d", custId, custName, address, phone);
+		return String.format("고객ID: %d, 고객명: %s, 고객주소: %s, 연락처: %s", custId, custName, address, phone);
 	}
 }

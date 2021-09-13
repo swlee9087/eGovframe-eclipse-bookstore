@@ -23,19 +23,22 @@ public class BookController {
 	}
 	@RequestMapping("/books/bookId/{bookId}")
 	public void findById (@PathVariable int bookId) {
-		BookDTO book = bookService.findById(bookId);
-		System.out.println(book.toString());
+		BookDTO books = bookService.findById(bookId);
+		System.out.println(books.toString());
 	}
 	@RequestMapping("/books/pubId/{pubId}")
 	public void findByPubId (@PathVariable int pubId) {
-		List<BookDTO> books = null;		
+		BookDTO books = bookService.findByPubId(pubId);
+		System.out.println(books.toString());
 	}
 	@RequestMapping("/books/bookTitle/{bookTitle}")
 	public void findByBookTitle (@PathVariable String bookTitle) {
-		List<BookDTO> books = null;
+		BookDTO books = bookService.findByBookTitle(bookTitle);
+		System.out.println(books.toString());
 	}
 	@RequestMapping("/books/price/{price}")
 	public void findByPrice (@PathVariable int price) {
-		List<BookDTO> books = null;
+		BookDTO books = bookService.findByPrice(price);
+		System.out.println(books.toString());
 	}
 }
